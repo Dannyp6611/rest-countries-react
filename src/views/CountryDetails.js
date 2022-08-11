@@ -1,6 +1,7 @@
 import { useParams, Link, useNavigate } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import { BsArrowLeft } from 'react-icons/bs';
+import { tabTitle } from '../utils/tabTitle';
 
 const CountryDetails = () => {
   const [country, setCountry] = useState(null);
@@ -8,6 +9,8 @@ const CountryDetails = () => {
   const [isLoading, setIsLoading] = useState(true);
   const navigate = useNavigate();
   const { countryName } = useParams();
+
+  tabTitle('Countries | Country Details');
 
   const fetchingSingleCountry = async () => {
     setCountryBorders([]);
@@ -134,7 +137,7 @@ const CountryDetails = () => {
               {countryBorders.length > 0 ? (
                 <div className="mt-6">
                   <h2 className="font-bold mb-2">Border Countries:</h2>
-                  <div className="flex gap-x-4 flex-wrap">
+                  <div className="flex gap-4 flex-wrap">
                     {countryBorders?.map((border, idx) => (
                       <Link
                         to={`/countries/${border}`}

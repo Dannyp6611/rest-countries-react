@@ -49,7 +49,7 @@ const Home = () => {
   }
 
   return (
-    <div className="max-w-[1400px] px-4 mx-auto">
+    <div className="max-w-[1400px] p-4 mx-auto">
       {/* Filter Header */}
       <div className="flex justify-between items-end py-10 flex-wrap gap-y-4">
         <div className="rounded-div flex px-4 pl-8 py-2 gap-x-4 md:max-w-[450px] w-full mr-4">
